@@ -28,6 +28,13 @@ view: box_office {
     value_format_name: usd_0
   }
 
+  measure: avg_collection {
+    type: average
+    sql: ${TABLE}.Collection ;;
+    drill_fields: [detail*]
+    value_format_name: usd_0
+  }
+
   set: detail {
     fields: [box_id, movie_title, Year, collection]
   }
