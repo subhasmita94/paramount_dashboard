@@ -1,9 +1,9 @@
 view: box_office {
-  sql_table_name: paramountpoc1.boxOffice ;;
+  sql_table_name: paramountpoc.box_office ;;
 
-  dimension: box_id {
+  dimension: box_office_id {
     type: number
-    sql: ${TABLE}.bo_id ;;
+    sql: ${TABLE}.box_office_id ;;
   }
 
   dimension: movie_title {
@@ -36,6 +36,6 @@ view: box_office {
   }
 
   set: detail {
-    fields: [box_id, movie_title, Year, collection]
+    fields: [box_office_id, movie_title, Year, collection]
   }
 }
